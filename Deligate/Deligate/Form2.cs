@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Deligate.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -21,5 +22,10 @@ namespace Deligate
         {
             MessageBox.Show("ok");
         }
+        public void get(Tbl_Name model)
+        {
+            textBox1.Text = "id= " + model.id + " name= " + model.name + " phone= " + model.phone;
+        }
+
     }
 }
