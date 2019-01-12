@@ -20,7 +20,7 @@ namespace Deligate
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("ok");
+          //  MessageBox.Show("ok");
         }
         public void get(Tbl_Name model)
         {

@@ -59,5 +59,33 @@ namespace Deligate
             tbl.name = dataGrid.Rows[e.RowIndex].Cells["name"].Value.ToString();
             tbl.phone = int.Parse(dataGrid.Rows[e.RowIndex].Cells["phone"].Value.ToString());
         }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            dataGrid.DataSource = db.Tbl_Name.Where(a => a.name.Contains(textBox1.Text)).ToList();
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+
+                Form2 f = new Form2();
+                this.GetVal += new OnGetValue(f.get);
+                GetVal(tbl);
+                f.ShowDialog();
+            }
+        }
+
+        private void dataGrid_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.ToString() == "F2")
+            {
+                Form2 f = new Form2();
+                this.GetVal += new OnGetValue(f.get);
+                GetVal(tbl);
+                f.ShowDialog();
+            }
+
+        }
     }
 }
