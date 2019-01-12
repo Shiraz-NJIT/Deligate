@@ -1,4 +1,4 @@
-﻿using Deligate.Model;
+﻿using Deligate.ViewModel;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
