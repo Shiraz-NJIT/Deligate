@@ -16,5 +16,10 @@ namespace Deligate
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("ok");
+        }
     }
 }
