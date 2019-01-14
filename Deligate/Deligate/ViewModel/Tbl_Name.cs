@@ -10,6 +10,6 @@ namespace Deligate.ViewModel
     {
         public int id { get; set; }
         public string name { get; set; }
-        public int phone { get; set; }
+        public string phone { get; set; }
     }
 }
