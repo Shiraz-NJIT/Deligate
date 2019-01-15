@@ -28,201 +28,266 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
+            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            this.PanelForm = new Telerik.WinControls.UI.RadPanel();
+            this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtB_Phone = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtB_Name = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtB_id = new System.Windows.Forms.TextBox();
-            this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.panel2.SuspendLayout();
-            this.panel5.SuspendLayout();
+            this.button1 = new Telerik.WinControls.UI.RadButton();
+            this.radLabel3 = new Telerik.WinControls.UI.RadLabel();
+            this.txtB_Name = new Telerik.WinControls.UI.RadTextBox();
+            this.txtB_Phone = new Telerik.WinControls.UI.RadTextBox();
+            this.radLabel2 = new Telerik.WinControls.UI.RadLabel();
+            this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
+            this.txtB_id = new Telerik.WinControls.UI.RadTextBox();
+            this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.dataGrid = new Telerik.WinControls.UI.RadGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
+            this.textBox1 = new Telerik.WinControls.UI.RadTextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.PanelForm)).BeginInit();
+            this.PanelForm.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).BeginInit();
+            this.radGroupBox1.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB_Name)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB_Phone)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB_id)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
+            this.radPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid.MasterTemplate)).BeginInit();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).BeginInit();
+            this.radGroupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox1
+            // PanelForm
             // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(0, 6);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(825, 54);
-            this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.PanelForm.Controls.Add(this.radGroupBox1);
+            this.PanelForm.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelForm.Location = new System.Drawing.Point(0, 0);
+            this.PanelForm.Name = "PanelForm";
+            this.PanelForm.Size = new System.Drawing.Size(964, 117);
+            this.PanelForm.TabIndex = 10;
             // 
-            // panel2
+            // radGroupBox1
             // 
-            this.panel2.Controls.Add(this.panel5);
-            this.panel2.Controls.Add(this.panel3);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Location = new System.Drawing.Point(0, 120);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(963, 548);
-            this.panel2.TabIndex = 9;
-            // 
-            // panel5
-            // 
-            this.panel5.Controls.Add(this.textBox1);
-            this.panel5.Controls.Add(this.dataGrid);
-            this.panel5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel5.Location = new System.Drawing.Point(0, 0);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(825, 548);
-            this.panel5.TabIndex = 6;
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(825, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(138, 548);
-            this.panel3.TabIndex = 4;
+            this.radGroupBox1.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox1.Controls.Add(this.panel1);
+            this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radGroupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.radGroupBox1.HeaderText = "";
+            this.radGroupBox1.Location = new System.Drawing.Point(0, 0);
+            this.radGroupBox1.Name = "radGroupBox1";
+            this.radGroupBox1.Padding = new System.Windows.Forms.Padding(2, 19, 2, 2);
+            this.radGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radGroupBox1.Size = new System.Drawing.Size(964, 117);
+            this.radGroupBox1.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.radLabel3);
+            this.panel1.Controls.Add(this.txtB_Name);
+            this.panel1.Controls.Add(this.txtB_Phone);
+            this.panel1.Controls.Add(this.radLabel2);
+            this.panel1.Controls.Add(this.radLabel1);
+            this.panel1.Controls.Add(this.txtB_id);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(361, 19);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(963, 120);
-            this.panel1.TabIndex = 8;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtB_Phone);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.txtB_Name);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.txtB_id);
-            this.groupBox1.Location = new System.Drawing.Point(252, 14);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(446, 100);
-            this.groupBox1.TabIndex = 1;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.panel1.Size = new System.Drawing.Size(601, 96);
+            this.panel1.TabIndex = 6;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(186, 71);
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.button1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(173, 61);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Size = new System.Drawing.Size(263, 32);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "ذخیره";
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // label3
+            // radLabel3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(292, 29);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(49, 17);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "Phone";
-            // 
-            // txtB_Phone
-            // 
-            this.txtB_Phone.Location = new System.Drawing.Point(346, 29);
-            this.txtB_Phone.Name = "txtB_Phone";
-            this.txtB_Phone.Size = new System.Drawing.Size(100, 22);
-            this.txtB_Phone.TabIndex = 4;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(135, 29);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(45, 17);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Name";
+            this.radLabel3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Location = new System.Drawing.Point(173, 16);
+            this.radLabel3.Name = "radLabel3";
+            this.radLabel3.Size = new System.Drawing.Size(46, 25);
+            this.radLabel3.TabIndex = 5;
+            this.radLabel3.Text = "تماس";
+            this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtB_Name
             // 
-            this.txtB_Name.Location = new System.Drawing.Point(186, 29);
+            this.txtB_Name.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtB_Name.Location = new System.Drawing.Point(238, 18);
             this.txtB_Name.Name = "txtB_Name";
-            this.txtB_Name.Size = new System.Drawing.Size(100, 22);
+            this.txtB_Name.Size = new System.Drawing.Size(176, 24);
             this.txtB_Name.TabIndex = 2;
             // 
-            // label1
+            // txtB_Phone
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(6, 29);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(19, 17);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "id";
+            this.txtB_Phone.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtB_Phone.Location = new System.Drawing.Point(17, 18);
+            this.txtB_Phone.Name = "txtB_Phone";
+            this.txtB_Phone.Size = new System.Drawing.Size(150, 24);
+            this.txtB_Phone.TabIndex = 4;
+            // 
+            // radLabel2
+            // 
+            this.radLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel2.Location = new System.Drawing.Point(420, 18);
+            this.radLabel2.Name = "radLabel2";
+            this.radLabel2.Size = new System.Drawing.Size(27, 25);
+            this.radLabel2.TabIndex = 3;
+            this.radLabel2.Text = "نام";
+            this.radLabel2.TextAlignment = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // radLabel1
+            // 
+            this.radLabel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel1.Location = new System.Drawing.Point(543, 12);
+            this.radLabel1.Name = "radLabel1";
+            this.radLabel1.Size = new System.Drawing.Size(53, 25);
+            this.radLabel1.TabIndex = 1;
+            this.radLabel1.Text = "شناسه";
+            this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
             // 
             // txtB_id
             // 
-            this.txtB_id.Location = new System.Drawing.Point(31, 29);
+            this.txtB_id.Anchor = System.Windows.Forms.AnchorStyles.Right;
+            this.txtB_id.Location = new System.Drawing.Point(466, 18);
             this.txtB_id.Name = "txtB_id";
-            this.txtB_id.Size = new System.Drawing.Size(100, 22);
+            this.txtB_id.Size = new System.Drawing.Size(71, 24);
             this.txtB_id.TabIndex = 0;
+            // 
+            // radPanel1
+            // 
+            this.radPanel1.Controls.Add(this.dataGrid);
+            this.radPanel1.Controls.Add(this.panel2);
+            this.radPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.radPanel1.Location = new System.Drawing.Point(0, 117);
+            this.radPanel1.Name = "radPanel1";
+            this.radPanel1.Size = new System.Drawing.Size(964, 515);
+            this.radPanel1.TabIndex = 11;
             // 
             // dataGrid
             // 
-            this.dataGrid.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGrid.BackgroundColor = System.Drawing.SystemColors.Control;
-            this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGrid.Location = new System.Drawing.Point(0, 66);
+            this.dataGrid.BackColor = System.Drawing.SystemColors.Control;
+            this.dataGrid.Cursor = System.Windows.Forms.Cursors.Default;
+            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGrid.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.dataGrid.ForeColor = System.Drawing.Color.Black;
+            this.dataGrid.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.dataGrid.Location = new System.Drawing.Point(0, 72);
+            // 
+            // 
+            // 
+            this.dataGrid.MasterTemplate.BottomPinnedRowsMode = Telerik.WinControls.UI.GridViewBottomPinnedRowsMode.Fixed;
+            this.dataGrid.MasterTemplate.DataMember = "s";
+            this.dataGrid.MasterTemplate.NewRowText = "s";
+            this.dataGrid.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dataGrid.Name = "dataGrid";
-            this.dataGrid.ReadOnly = true;
-            this.dataGrid.RowTemplate.Height = 24;
-            this.dataGrid.Size = new System.Drawing.Size(825, 482);
-            this.dataGrid.TabIndex = 3;
-            this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
-            this.dataGrid.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_RowEnter);
-            this.dataGrid.KeyDown += new System.Windows.Forms.KeyEventHandler(this.dataGrid_KeyDown);
+            this.dataGrid.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.dataGrid.Size = new System.Drawing.Size(964, 443);
+            this.dataGrid.TabIndex = 7;
+            this.dataGrid.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.MasterTemplate_CellClick);
+            this.dataGrid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGrid_KeyPress);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.radGroupBox2);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(964, 72);
+            this.panel2.TabIndex = 6;
+            // 
+            // radGroupBox2
+            // 
+            this.radGroupBox2.AccessibleRole = System.Windows.Forms.AccessibleRole.Grouping;
+            this.radGroupBox2.Controls.Add(this.textBox1);
+            this.radGroupBox2.Dock = System.Windows.Forms.DockStyle.Right;
+            this.radGroupBox2.HeaderText = "جست جو";
+            this.radGroupBox2.Location = new System.Drawing.Point(731, 0);
+            this.radGroupBox2.Name = "radGroupBox2";
+            this.radGroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.radGroupBox2.Size = new System.Drawing.Size(233, 72);
+            this.radGroupBox2.TabIndex = 0;
+            this.radGroupBox2.Text = "جست جو";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(78, 21);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(150, 24);
+            this.textBox1.TabIndex = 5;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(963, 668);
-            this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(964, 632);
+            this.Controls.Add(this.radPanel1);
+            this.Controls.Add(this.PanelForm);
             this.Name = "Form2";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Form2_Load);
-            this.panel2.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PanelForm)).EndInit();
+            this.PanelForm.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox1)).EndInit();
+            this.radGroupBox1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.button1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB_Name)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB_Phone)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radLabel1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtB_id)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
+            this.radPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGrid.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radGroupBox2)).EndInit();
+            this.radGroupBox2.ResumeLayout(false);
+            this.radGroupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.textBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Panel panel3;
+        private Telerik.WinControls.UI.RadPanel PanelForm;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox1;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtB_Phone;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtB_Name;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtB_id;
-        private System.Windows.Forms.DataGridView dataGrid;
+        private Telerik.WinControls.UI.RadButton button1;
+        private Telerik.WinControls.UI.RadLabel radLabel3;
+        private Telerik.WinControls.UI.RadTextBox txtB_Name;
+        private Telerik.WinControls.UI.RadTextBox txtB_Phone;
+        private Telerik.WinControls.UI.RadLabel radLabel2;
+        private Telerik.WinControls.UI.RadLabel radLabel1;
+        private Telerik.WinControls.UI.RadTextBox txtB_id;
+        private Telerik.WinControls.UI.RadPanel radPanel1;
+        private System.Windows.Forms.Panel panel2;
+        private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
+        private Telerik.WinControls.UI.RadTextBox textBox1;
+        private Telerik.WinControls.UI.RadGridView dataGrid;
     }
 }

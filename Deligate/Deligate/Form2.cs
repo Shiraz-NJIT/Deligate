@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Telerik.WinControls.UI;
 
 namespace Deligate
 {
@@ -27,16 +28,19 @@ namespace Deligate
 
             dataGrid.ColumnCount = 3;
             dataGrid.Columns[0].Name = "id";
-            dataGrid.Columns[0].DataPropertyName = "id";
+            dataGrid.Columns[0].FieldName = "id";
             dataGrid.Columns[0].HeaderText = "id";
+            dataGrid.Columns[0].Width = 50;
 
             dataGrid.Columns[1].Name = "name";
-            dataGrid.Columns[1].DataPropertyName = "name";
+            dataGrid.Columns[1].FieldName = "name";
             dataGrid.Columns[1].HeaderText = "name";
+            dataGrid.Columns[1].Width = 100;
 
             dataGrid.Columns[2].Name = "phone";
-            dataGrid.Columns[2].DataPropertyName = "phone";
+            dataGrid.Columns[2].FieldName = "phone";
             dataGrid.Columns[2].HeaderText = "phone";
+            dataGrid.Columns[2].Width = 100;
 
             AddButtonColumn();
 
@@ -69,15 +73,6 @@ namespace Deligate
 
             //  MessageBox.Show("ok");
         }
-        #region انتخاب هر سطر از دیتاگریدویوو
-        private void dataGrid_RowEnter(object sender, DataGridViewCellEventArgs e)
-        {
-            tbl.id = int.Parse(dataGrid.Rows[e.RowIndex].Cells["id"].Value.ToString());
-            tbl.name = dataGrid.Rows[e.RowIndex].Cells["name"].Value.ToString();
-            tbl.phone = dataGrid.Rows[e.RowIndex].Cells["phone"].Value.ToString();
-
-        }
-        #endregion
         #region سرچ کردن
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -99,8 +94,7 @@ namespace Deligate
         {
             if (e.KeyChar == (char)Keys.Enter)
             {
-                Form1 f = new Form1();
-                GetVal(tbl);
+                SentData();
                 this.Close();
             }
         }
@@ -120,7 +114,7 @@ namespace Deligate
                 }
 
                 button1.Text = "ذخیره";
-                
+
                 isUpdate = false;
 
 
@@ -160,47 +154,44 @@ namespace Deligate
             dataGrid.DataSource = "";
             dataGrid.DataSource = ListData;
 
-            AddButtonColumn();
+            //AddButtonColumn();
         }
         #endregion
         #region اضاف کردن دکمه به دیتاگرید ویوو
         void AddButtonColumn()
         {
-            DataGridViewButtonColumn DGV_ButtonEdit = new DataGridViewButtonColumn();
+            GridViewCommandColumn DGV_ButtonEdit = new GridViewCommandColumn();
             DGV_ButtonEdit.HeaderText = "Edit";
             DGV_ButtonEdit.Name = "DGV_ButtonEdit";
-            DGV_ButtonEdit.Text = "Edit";
-            DGV_ButtonEdit.UseColumnTextForButtonValue = true;
-            DGV_ButtonEdit.DataPropertyName = "id";
+            DGV_ButtonEdit.DefaultText = "Edit";
+            //DGV_ButtonEdit.tex;//.UseColumnTextForButtonValue = true;
+            //DGV_ButtonEdit.FieldName = "id";
             DGV_ButtonEdit.Width = 80;
-            dataGrid.Columns.Add(DGV_ButtonEdit);
 
-            DataGridViewButtonColumn DGV_ButtonDelete = new DataGridViewButtonColumn();
+            dataGrid.MasterTemplate.Columns.Add(DGV_ButtonEdit);
+
+
+            GridViewCommandColumn DGV_ButtonDelete = new GridViewCommandColumn();
             DGV_ButtonDelete.HeaderText = "Delete";
             DGV_ButtonDelete.Name = "DGDGV_ButtonDelete";
-            DGV_ButtonDelete.Text = "Delete";
-            DGV_ButtonDelete.UseColumnTextForButtonValue = true;
-            DGV_ButtonDelete.DataPropertyName = "id";
+            DGV_ButtonDelete.DefaultText = "Delete";
+            //DGV_ButtonDelete.UseColumnTextForButtonValue = true;
+         //   DGV_ButtonDelete.FieldName = "id";
             DGV_ButtonDelete.Width = 80;
-            dataGrid.Columns.Add(DGV_ButtonDelete);
-        }
-        #endregion
-        #region اینتر روی دیتاگرید ویوو
-        private void dataGrid_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyValue == (char)Keys.Enter)
-            {
-                Form1 f = new Form1();
-                GetVal(tbl);
-                this.Close();
-            }
+            dataGrid.MasterTemplate.Columns.Add(DGV_ButtonDelete);
         }
         #endregion
         #region زدن دکمه حذف و ویرایش درون دیتا گرید ویوو
-        private void dataGrid_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void MasterTemplate_CellClick(object sender, GridViewCellEventArgs e)
         {
-            int id = int.Parse(dataGrid.Rows[e.RowIndex].Cells["id"].Value.ToString());
-            var user = ListData.Where(a => a.id == id).FirstOrDefault();
+            int id = 0;
+            Tbl_Name user = new Tbl_Name();
+            try
+            {
+                id = int.Parse(dataGrid.Rows[e.RowIndex].Cells["id"].Value.ToString());
+                user = ListData.Where(a => a.id == id).FirstOrDefault();
+            }
+            catch {}
             switch (e.ColumnIndex)
             {
                 case 3://update
@@ -222,6 +213,25 @@ namespace Deligate
                     break;
                 default:
                     break;
+            }
+
+        }
+        #endregion
+        void SentData()
+        {
+            var name = dataGrid.SelectedRows[0].Cells["name"].Value.ToString();
+            string phone = dataGrid.SelectedRows[0].Cells["phone"].Value.ToString();
+            int id = int.Parse(dataGrid.SelectedRows[0].Cells["id"].Value.ToString());
+            Form1 f = new Form1();
+            GetVal(new Tbl_Name { name = name, phone = phone, id = id });
+        }
+        #region اینتر روی دیتاگرید ویوو
+        private void dataGrid_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)Keys.Enter)
+            {
+                SentData();
+                this.Close();
             }
         }
         #endregion
