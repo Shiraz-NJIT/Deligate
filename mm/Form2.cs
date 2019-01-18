@@ -22,7 +22,33 @@ namespace Deligate
         {
             InitializeComponent();
         }
-        Deligate.ViewModel.Tbl_Name tbl = new Deligate.ViewModel.Tbl_Name();
+        #region بایند dataGrid
+        void bindDataGrid()
+        {
+
+            dataGrid.ColumnCount = 3;
+            dataGrid.Columns[0].Name = "id";
+            dataGrid.Columns[0].FieldName = "id";
+            dataGrid.Columns[0].HeaderText = "id";
+            dataGrid.Columns[0].Width = 50;
+
+            dataGrid.Columns[1].Name = "name";
+            dataGrid.Columns[1].FieldName = "name";
+            dataGrid.Columns[1].HeaderText = "name";
+            dataGrid.Columns[1].Width = 100;
+
+            dataGrid.Columns[2].Name = "phone";
+            dataGrid.Columns[2].FieldName = "phone";
+            dataGrid.Columns[2].HeaderText = "phone";
+            dataGrid.Columns[2].Width = 100;
+
+            AddButtonColumn();
+
+            dataGrid.DataSource = DataforGriedView();
+
+        }
+        #endregion
+        Tbl_Name tbl = new Tbl_Name();
 
         #region لیست داده های گرید ویوو
 
@@ -43,12 +69,23 @@ namespace Deligate
         #endregion
         private void Form2_Load(object sender, EventArgs e)
         {
-            radGridViewExtended2.DataSource = DataforGriedView(); 
+            bindDataGrid();
+
             //  MessageBox.Show("ok");
         }
         #region سرچ کردن
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
+            int id = 0;
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
             dataGrid.DataSource = ListData.Where(a => a.name.Contains(textBox1.Text) || a.id.ToString().Contains(textBox1.Text)).ToList();
         }
         #endregion
@@ -114,8 +151,9 @@ namespace Deligate
         #region داده درون دیتاگرید ویوو را تغییر میدهد
         void ChangeDataGrid()
         {
-            radGridViewExtended2.DataSource = "";
-            radGridViewExtended2.DataSource = ListData;
+            dataGrid.DataSource = "";
+            dataGrid.DataSource = ListData;
+
             //AddButtonColumn();
         }
         #endregion
@@ -138,9 +176,9 @@ namespace Deligate
             DGV_ButtonDelete.Name = "DGDGV_ButtonDelete";
             DGV_ButtonDelete.DefaultText = "Delete";
             //DGV_ButtonDelete.UseColumnTextForButtonValue = true;
-            //   DGV_ButtonDelete.FieldName = "id";
+         //   DGV_ButtonDelete.FieldName = "id";
             DGV_ButtonDelete.Width = 80;
-            dataGrid.Columns.Add(DGV_ButtonDelete);//.MasterTemplate.Columns.Add(DGV_ButtonDelete);
+            dataGrid.MasterTemplate.Columns.Add(DGV_ButtonDelete);
         }
         #endregion
         #region زدن دکمه حذف و ویرایش درون دیتا گرید ویوو
@@ -153,7 +191,7 @@ namespace Deligate
                 id = int.Parse(dataGrid.Rows[e.RowIndex].Cells["id"].Value.ToString());
                 user = ListData.Where(a => a.id == id).FirstOrDefault();
             }
-            catch { }
+            catch {}
             switch (e.ColumnIndex)
             {
                 case 3://update
@@ -197,41 +235,5 @@ namespace Deligate
             }
         }
         #endregion
-
-        private void radGridViewExtended2_CellClick(object sender, GridViewCellEventArgs e)
-        {
-            int id = 0;
-            Tbl_Name user = new Tbl_Name();
-            try
-            {
-                id = int.Parse(radGridViewExtended2.Rows[e.RowIndex].Cells["id"].Value.ToString());
-                user = ListData.Where(a => a.id == id).FirstOrDefault();
-            }
-            catch { }
-            if (e.ColumnIndex == 4)
-            {
-                    txtB_id.Text = id.ToString();
-                    txtB_Name.Text = user.name;
-                    txtB_Phone.Text = user.phone;
-
-                    button1.Text = "ویرایش";
-                    isUpdate = true;
-            }
-            else if (e.ColumnIndex == 3)
-            {
-                DialogResult dialogResult = MessageBox.Show("آیا میخواهید حذف کنید", "سوال", MessageBoxButtons.YesNo);
-                if (dialogResult == DialogResult.Yes)
-                {
-                    ListData.Remove(user);
-                    radGridViewExtended2.DataSource = "";
-                    radGridViewExtended2.DataSource = ListData;
-                }
-            }
-        }
-
-        private void txtB_id_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -28,7 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Telerik.WinControls.UI.TableViewDefinition tableViewDefinition1 = new Telerik.WinControls.UI.TableViewDefinition();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn1 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn2 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewTextBoxColumn gridViewTextBoxColumn3 = new Telerik.WinControls.UI.GridViewTextBoxColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn1 = new Telerik.WinControls.UI.GridViewCommandColumn();
+            Telerik.WinControls.UI.GridViewCommandColumn gridViewCommandColumn2 = new Telerik.WinControls.UI.GridViewCommandColumn();
             this.PanelForm = new Telerik.WinControls.UI.RadPanel();
             this.radGroupBox1 = new Telerik.WinControls.UI.RadGroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -40,6 +44,7 @@
             this.radLabel1 = new Telerik.WinControls.UI.RadLabel();
             this.txtB_id = new Telerik.WinControls.UI.RadTextBox();
             this.radPanel1 = new Telerik.WinControls.UI.RadPanel();
+            this.radGridViewExtended2 = new Njit.Program.Telerik.Controls.RadGridViewExtended();
             this.dataGrid = new Telerik.WinControls.UI.RadGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radGroupBox2 = new Telerik.WinControls.UI.RadGroupBox();
@@ -58,6 +63,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtB_id)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).BeginInit();
             this.radPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridViewExtended2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridViewExtended2.MasterTemplate)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid.MasterTemplate)).BeginInit();
             this.panel2.SuspendLayout();
@@ -86,6 +93,10 @@
             this.radGroupBox1.Name = "radGroupBox1";
             this.radGroupBox1.Padding = new System.Windows.Forms.Padding(2, 19, 2, 2);
             this.radGroupBox1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            // 
+            // 
+            // 
+            this.radGroupBox1.RootElement.Padding = new System.Windows.Forms.Padding(2, 19, 2, 2);
             this.radGroupBox1.Size = new System.Drawing.Size(964, 117);
             this.radGroupBox1.TabIndex = 0;
             // 
@@ -121,7 +132,7 @@
             this.radLabel3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel3.Location = new System.Drawing.Point(173, 16);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(46, 25);
+            this.radLabel3.Size = new System.Drawing.Size(57, 31);
             this.radLabel3.TabIndex = 5;
             this.radLabel3.Text = "تماس";
             this.radLabel3.TextAlignment = System.Drawing.ContentAlignment.TopRight;
@@ -133,6 +144,7 @@
             this.txtB_Name.Name = "txtB_Name";
             this.txtB_Name.Size = new System.Drawing.Size(176, 24);
             this.txtB_Name.TabIndex = 2;
+            this.txtB_Name.TabStop = false;
             // 
             // txtB_Phone
             // 
@@ -141,6 +153,7 @@
             this.txtB_Phone.Name = "txtB_Phone";
             this.txtB_Phone.Size = new System.Drawing.Size(150, 24);
             this.txtB_Phone.TabIndex = 4;
+            this.txtB_Phone.TabStop = false;
             // 
             // radLabel2
             // 
@@ -148,7 +161,7 @@
             this.radLabel2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel2.Location = new System.Drawing.Point(420, 18);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(27, 25);
+            this.radLabel2.Size = new System.Drawing.Size(33, 31);
             this.radLabel2.TabIndex = 3;
             this.radLabel2.Text = "نام";
             this.radLabel2.TextAlignment = System.Drawing.ContentAlignment.TopRight;
@@ -159,7 +172,7 @@
             this.radLabel1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.radLabel1.Location = new System.Drawing.Point(543, 12);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(53, 25);
+            this.radLabel1.Size = new System.Drawing.Size(66, 31);
             this.radLabel1.TabIndex = 1;
             this.radLabel1.Text = "شناسه";
             this.radLabel1.TextAlignment = System.Drawing.ContentAlignment.TopRight;
@@ -171,9 +184,12 @@
             this.txtB_id.Name = "txtB_id";
             this.txtB_id.Size = new System.Drawing.Size(71, 24);
             this.txtB_id.TabIndex = 0;
+            this.txtB_id.TabStop = false;
+            this.txtB_id.TextChanged += new System.EventHandler(this.txtB_id_TextChanged);
             // 
             // radPanel1
             // 
+            this.radPanel1.Controls.Add(this.radGridViewExtended2);
             this.radPanel1.Controls.Add(this.dataGrid);
             this.radPanel1.Controls.Add(this.panel2);
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -182,26 +198,65 @@
             this.radPanel1.Size = new System.Drawing.Size(964, 515);
             this.radPanel1.TabIndex = 11;
             // 
+            // radGridViewExtended2
+            // 
+            this.radGridViewExtended2.BackColor = System.Drawing.SystemColors.Control;
+            this.radGridViewExtended2.Cursor = System.Windows.Forms.Cursors.Default;
+            this.radGridViewExtended2.Font = new System.Drawing.Font("Segoe UI", 8.25F);
+            this.radGridViewExtended2.ForeColor = System.Drawing.Color.Black;
+            this.radGridViewExtended2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.radGridViewExtended2.Location = new System.Drawing.Point(353, 87);
+            // 
+            // radGridViewExtended2
+            // 
+            gridViewTextBoxColumn1.EnableExpressionEditor = false;
+            gridViewTextBoxColumn1.FieldName = "id";
+            gridViewTextBoxColumn1.HeaderText = "id";
+            gridViewTextBoxColumn1.Name = "id";
+            gridViewTextBoxColumn2.EnableExpressionEditor = false;
+            gridViewTextBoxColumn2.FieldName = "name";
+            gridViewTextBoxColumn2.HeaderText = "name";
+            gridViewTextBoxColumn2.Name = "name";
+            gridViewTextBoxColumn3.EnableExpressionEditor = false;
+            gridViewTextBoxColumn3.FieldName = "phone";
+            gridViewTextBoxColumn3.HeaderText = "phone";
+            gridViewTextBoxColumn3.Name = "phone";
+            gridViewCommandColumn1.EnableExpressionEditor = false;
+            gridViewCommandColumn1.HeaderText = "Delete";
+            gridViewCommandColumn1.Name = "brnDelete";
+            gridViewCommandColumn2.EnableExpressionEditor = false;
+            gridViewCommandColumn2.HeaderText = "Update";
+            gridViewCommandColumn2.Name = "btnUpdate";
+            this.radGridViewExtended2.MasterTemplate.Columns.AddRange(new Telerik.WinControls.UI.GridViewDataColumn[] {
+            gridViewTextBoxColumn1,
+            gridViewTextBoxColumn2,
+            gridViewTextBoxColumn3,
+            gridViewCommandColumn1,
+            gridViewCommandColumn2});
+            this.radGridViewExtended2.Name = "radGridViewExtended2";
+            this.radGridViewExtended2.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.radGridViewExtended2.Size = new System.Drawing.Size(580, 391);
+            this.radGridViewExtended2.TabIndex = 8;
+            this.radGridViewExtended2.Text = "radGridViewExtended2";
+            this.radGridViewExtended2.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.radGridViewExtended2_CellClick);
+            // 
             // dataGrid
             // 
             this.dataGrid.BackColor = System.Drawing.SystemColors.Control;
             this.dataGrid.Cursor = System.Windows.Forms.Cursors.Default;
-            this.dataGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGrid.Font = new System.Drawing.Font("Segoe UI", 8.25F);
             this.dataGrid.ForeColor = System.Drawing.Color.Black;
             this.dataGrid.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.dataGrid.Location = new System.Drawing.Point(0, 72);
             // 
+            // dataGrid
             // 
-            // 
-            this.dataGrid.MasterTemplate.BottomPinnedRowsMode = Telerik.WinControls.UI.GridViewBottomPinnedRowsMode.Fixed;
             this.dataGrid.MasterTemplate.DataMember = "s";
-            this.dataGrid.MasterTemplate.NewRowText = "s";
-            this.dataGrid.MasterTemplate.ViewDefinition = tableViewDefinition1;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.dataGrid.Size = new System.Drawing.Size(964, 443);
+            this.dataGrid.Size = new System.Drawing.Size(98, 443);
             this.dataGrid.TabIndex = 7;
+            this.dataGrid.Visible = false;
             this.dataGrid.CellClick += new Telerik.WinControls.UI.GridViewCellEventHandler(this.MasterTemplate_CellClick);
             this.dataGrid.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dataGrid_KeyPress);
             // 
@@ -223,6 +278,10 @@
             this.radGroupBox2.Location = new System.Drawing.Point(731, 0);
             this.radGroupBox2.Name = "radGroupBox2";
             this.radGroupBox2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            // 
+            // 
+            // 
+            this.radGroupBox2.RootElement.Padding = new System.Windows.Forms.Padding(2, 18, 2, 2);
             this.radGroupBox2.Size = new System.Drawing.Size(233, 72);
             this.radGroupBox2.TabIndex = 0;
             this.radGroupBox2.Text = "جست جو";
@@ -230,10 +289,11 @@
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(78, 21);
+            this.textBox1.Location = new System.Drawing.Point(77, 21);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(150, 24);
             this.textBox1.TabIndex = 5;
+            this.textBox1.TabStop = false;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
             // 
@@ -262,6 +322,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.txtB_id)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.radPanel1)).EndInit();
             this.radPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.radGridViewExtended2.MasterTemplate)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.radGridViewExtended2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid.MasterTemplate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).EndInit();
             this.panel2.ResumeLayout(false);
@@ -289,5 +351,7 @@
         private Telerik.WinControls.UI.RadGroupBox radGroupBox2;
         private Telerik.WinControls.UI.RadTextBox textBox1;
         private Telerik.WinControls.UI.RadGridView dataGrid;
+        private Njit.Program.Telerik.Controls.RadGridViewExtended radGridViewExtended1;
+        private Njit.Program.Telerik.Controls.RadGridViewExtended radGridViewExtended2;
     }
 }
