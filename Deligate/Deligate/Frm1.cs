@@ -31,7 +31,7 @@ namespace Deligate
                 Frm2 f = new Frm2();
                 this.SendData += new SendDataToForm2(f.getData);
                 SendData(1);//1=عنوان نامه
-                f.Show();
+                f.ShowDialog();
                 SendData = null;
                 f.senddataGridToFrm1 += GetDataFromFrm2;
             }
@@ -45,7 +45,7 @@ namespace Deligate
                 Frm2 f = new Frm2();
                 this.SendData += new SendDataToForm2(f.getData);
                 SendData(2);//2=مخاطب نامه
-                f.Show();
+                f.ShowDialog();
                 SendData = null;
                 f.senddataGridToFrm1 += GetDataFromFrm2;
 
@@ -60,7 +60,7 @@ namespace Deligate
                 Frm2 f = new Frm2();
                 this.SendData += new SendDataToForm2(f.getData);
                 SendData(3);//3=اقدام کننده
-                f.Show();
+                f.ShowDialog();
                 SendData = null;
                 f.senddataGridToFrm1 += GetDataFromFrm2;
 

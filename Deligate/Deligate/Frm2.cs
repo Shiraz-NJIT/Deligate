@@ -75,8 +75,10 @@ namespace Deligate
             TypeClickF1 = Type;
             radGridViewExtended1.DataSource = "";
             radGridViewExtended1.DataSource = DataForDataGrid(Type);
+
         }
         #endregion
+        
         #region داده گرید ویوو را تغییر میدهد
         
         private void ChangeDataGrid()
@@ -89,7 +91,7 @@ namespace Deligate
         
         private void Add_update()
         {
-            if (txtB_id.Text.Length == 0 || txtB_Name.Text.Length == 0)
+            if (txtB_id.Text.Length == 0 || txtB_title.Text.Length == 0)
             {
                 MessageBox.Show("لطفا مقدار ها را وارد کنید");
             }else if (list.Where(a => a.id == int.Parse(txtB_id.Text)).Count() > 0)
@@ -99,7 +101,7 @@ namespace Deligate
                 {
                     var lst = list.Where(a => a.id == int.Parse(txtB_id.Text)).FirstOrDefault();
 
-                    lst.title = txtB_Name.Text;
+                    lst.title = txtB_title.Text;
                 }
 
             }
@@ -108,10 +110,10 @@ namespace Deligate
                 DialogResult dialogResultAdd = MessageBox.Show("آیا میخواهید اضافه کنید", "سوال", MessageBoxButtons.YesNo);
                 if (dialogResultAdd == DialogResult.Yes)
                 {
-                    list.Add(new DataViewModel { id = int.Parse(txtB_id.Text), title = txtB_Name.Text });
+                    list.Add(new DataViewModel { id = int.Parse(txtB_id.Text), title = txtB_title.Text });
                 }
             }
-            txtB_Name.Clear();
+            txtB_title.Clear();
             txtB_id.Clear();
             ChangeDataGrid();
         }
@@ -135,7 +137,7 @@ namespace Deligate
                 txtB_id.Text = id;
                 string title = radGridViewExtended1.SelectedRows[0].Cells["title"].Value.ToString();
 
-                txtB_Name.Text = title;
+                txtB_title.Text = title;
                 
             }
             catch
@@ -179,10 +181,10 @@ namespace Deligate
         
         private void txtB_Name_TextChanging(object sender, Telerik.WinControls.TextChangingEventArgs e)
         {
-            if (txtB_Name.Text.Length == 0)
+            if (txtB_title.Text.Length == 0)
                 isSearch = true;
             if (isSearch)
-                radGridViewExtended1.DataSource = list.Where(a => a.title.Contains(txtB_Name.Text)).ToList();
+                radGridViewExtended1.DataSource = list.Where(a => a.title.Contains(txtB_title.Text)).ToList();
 
         }
         #endregion
@@ -206,7 +208,7 @@ namespace Deligate
                     list.Remove(list.Where(a => a.id == id).FirstOrDefault());
                 }
                 ChangeDataGrid();
-                txtB_Name.Clear();
+                txtB_title.Clear();
                 txtB_id.Clear();
             }
             catch

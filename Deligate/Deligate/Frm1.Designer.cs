@@ -67,8 +67,9 @@
             this.radPanel1.Controls.Add(this.radGroupBox1);
             this.radPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.radPanel1.Location = new System.Drawing.Point(0, 0);
+            this.radPanel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radPanel1.Name = "radPanel1";
-            this.radPanel1.Size = new System.Drawing.Size(528, 376);
+            this.radPanel1.Size = new System.Drawing.Size(594, 494);
             this.radPanel1.TabIndex = 0;
             // 
             // radGroupBox1
@@ -77,13 +78,15 @@
             this.radGroupBox1.Controls.Add(this.panel1);
             this.radGroupBox1.Dock = System.Windows.Forms.DockStyle.Right;
             this.radGroupBox1.HeaderText = "";
-            this.radGroupBox1.Location = new System.Drawing.Point(197, 0);
+            this.radGroupBox1.Location = new System.Drawing.Point(209, 0);
+            this.radGroupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radGroupBox1.Name = "radGroupBox1";
+            this.radGroupBox1.Padding = new System.Windows.Forms.Padding(2, 24, 2, 3);
             // 
             // 
             // 
-            this.radGroupBox1.RootElement.Padding = new System.Windows.Forms.Padding(2, 18, 2, 2);
-            this.radGroupBox1.Size = new System.Drawing.Size(331, 376);
+            this.radGroupBox1.RootElement.Padding = new System.Windows.Forms.Padding(2, 24, 2, 3);
+            this.radGroupBox1.Size = new System.Drawing.Size(385, 494);
             this.radGroupBox1.TabIndex = 0;
             // 
             // panel1
@@ -100,16 +103,18 @@
             this.panel1.Controls.Add(this.radLabel2);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.radLabel1);
-            this.panel1.Location = new System.Drawing.Point(5, 12);
+            this.panel1.Location = new System.Drawing.Point(6, 16);
+            this.panel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(314, 352);
+            this.panel1.Size = new System.Drawing.Size(367, 462);
             this.panel1.TabIndex = 0;
             // 
             // radTextBox5
             // 
-            this.radTextBox5.Location = new System.Drawing.Point(18, 9);
+            this.radTextBox5.Location = new System.Drawing.Point(20, 12);
+            this.radTextBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radTextBox5.Name = "radTextBox5";
-            this.radTextBox5.Size = new System.Drawing.Size(159, 24);
+            this.radTextBox5.Size = new System.Drawing.Size(179, 24);
             this.radTextBox5.TabIndex = 1;
             this.radTextBox5.TabStop = false;
             this.radTextBox5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radTextBox5_KeyDown);
@@ -117,100 +122,119 @@
             // 
             // radLabel6
             // 
-            this.radLabel6.Location = new System.Drawing.Point(188, 241);
+            this.radLabel6.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel6.Location = new System.Drawing.Point(211, 316);
+            this.radLabel6.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radLabel6.Name = "radLabel6";
-            this.radLabel6.Size = new System.Drawing.Size(111, 22);
+            this.radLabel6.Size = new System.Drawing.Size(141, 25);
             this.radLabel6.TabIndex = 8;
             this.radLabel6.Text = "شماره اقدام کننده";
             // 
             // radTextBox4
             // 
-            this.radTextBox4.Location = new System.Drawing.Point(18, 241);
+            this.radTextBox4.Location = new System.Drawing.Point(20, 316);
+            this.radTextBox4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radTextBox4.Name = "radTextBox4";
-            this.radTextBox4.Size = new System.Drawing.Size(159, 24);
+            this.radTextBox4.Size = new System.Drawing.Size(179, 24);
             this.radTextBox4.TabIndex = 9;
             this.radTextBox4.TabStop = false;
             // 
             // radLabel5
             // 
-            this.radLabel5.Location = new System.Drawing.Point(228, 196);
+            this.radLabel5.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel5.Location = new System.Drawing.Point(264, 256);
+            this.radLabel5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radLabel5.Name = "radLabel5";
-            this.radLabel5.Size = new System.Drawing.Size(71, 22);
+            this.radLabel5.Size = new System.Drawing.Size(88, 25);
             this.radLabel5.TabIndex = 6;
             this.radLabel5.Text = "اقدام کننده";
             // 
             // radTextBox3
             // 
-            this.radTextBox3.Location = new System.Drawing.Point(18, 196);
+            this.radTextBox3.Location = new System.Drawing.Point(20, 257);
+            this.radTextBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radTextBox3.Name = "radTextBox3";
-            this.radTextBox3.Size = new System.Drawing.Size(159, 24);
+            this.radTextBox3.Size = new System.Drawing.Size(179, 24);
             this.radTextBox3.TabIndex = 7;
             this.radTextBox3.TabStop = false;
             this.radTextBox3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radTextBox3_KeyDown);
             // 
             // radLabel4
             // 
-            this.radLabel4.Location = new System.Drawing.Point(180, 149);
+            this.radLabel4.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel4.Location = new System.Drawing.Point(202, 196);
+            this.radLabel4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radLabel4.Name = "radLabel4";
-            this.radLabel4.Size = new System.Drawing.Size(119, 22);
+            this.radLabel4.Size = new System.Drawing.Size(150, 25);
             this.radLabel4.TabIndex = 4;
             this.radLabel4.Text = "شماره مخاطب نامه";
             // 
             // radTextBox2
             // 
-            this.radTextBox2.Location = new System.Drawing.Point(18, 149);
+            this.radTextBox2.Location = new System.Drawing.Point(20, 196);
+            this.radTextBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radTextBox2.Name = "radTextBox2";
-            this.radTextBox2.Size = new System.Drawing.Size(159, 24);
+            this.radTextBox2.Size = new System.Drawing.Size(179, 24);
             this.radTextBox2.TabIndex = 5;
             this.radTextBox2.TabStop = false;
             // 
             // radLabel3
             // 
-            this.radLabel3.Location = new System.Drawing.Point(219, 99);
+            this.radLabel3.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel3.Location = new System.Drawing.Point(247, 130);
+            this.radLabel3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radLabel3.Name = "radLabel3";
-            this.radLabel3.Size = new System.Drawing.Size(80, 22);
+            this.radLabel3.Size = new System.Drawing.Size(97, 25);
             this.radLabel3.TabIndex = 2;
             this.radLabel3.Text = "مخاطب نامه";
             // 
             // radTextBoxmMokhatabName
             // 
-            this.radTextBoxmMokhatabName.Location = new System.Drawing.Point(18, 99);
+            this.radTextBoxmMokhatabName.Location = new System.Drawing.Point(20, 130);
+            this.radTextBoxmMokhatabName.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radTextBoxmMokhatabName.Name = "radTextBoxmMokhatabName";
-            this.radTextBoxmMokhatabName.Size = new System.Drawing.Size(159, 24);
+            this.radTextBoxmMokhatabName.Size = new System.Drawing.Size(179, 24);
             this.radTextBoxmMokhatabName.TabIndex = 3;
             this.radTextBoxmMokhatabName.TabStop = false;
             this.radTextBoxmMokhatabName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.radTextBoxmMokhatabName_KeyDown);
             // 
             // radLabel2
             // 
-            this.radLabel2.Location = new System.Drawing.Point(192, 50);
+            this.radLabel2.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel2.Location = new System.Drawing.Point(216, 66);
+            this.radLabel2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radLabel2.Name = "radLabel2";
-            this.radLabel2.Size = new System.Drawing.Size(107, 22);
+            this.radLabel2.Size = new System.Drawing.Size(136, 25);
             this.radLabel2.TabIndex = 1;
             this.radLabel2.Text = "شماره عنوان نامه";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 50);
+            this.textBox1.Location = new System.Drawing.Point(20, 66);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(159, 24);
+            this.textBox1.Size = new System.Drawing.Size(179, 24);
             this.textBox1.TabIndex = 2;
             this.textBox1.TabStop = false;
             // 
             // radLabel1
             // 
-            this.radLabel1.Location = new System.Drawing.Point(211, 9);
+            this.radLabel1.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radLabel1.Location = new System.Drawing.Point(261, 12);
+            this.radLabel1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.radLabel1.Name = "radLabel1";
-            this.radLabel1.Size = new System.Drawing.Size(68, 22);
+            this.radLabel1.Size = new System.Drawing.Size(83, 25);
             this.radLabel1.TabIndex = 0;
             this.radLabel1.Text = "عنوان نامه";
             // 
             // Frm1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(528, 376);
+            this.ClientSize = new System.Drawing.Size(594, 494);
             this.Controls.Add(this.radPanel1);
+            this.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Frm1";
             this.Text = "Frm1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
